@@ -224,27 +224,9 @@ Please open an issue or submit a pull request if you would like to help improve 
 
 ***
 
-## Maintainer
-
-**Maintainer:** Your Name  
-**GitHub:** <https://github.com/yourusername>
-
-***
-
 ## Disclaimer
 
 This repository is a community-prepared data extraction and structuring project based on a public source document.
 
 It is provided for convenience and practical reuse, but it should **not** be treated as a legally authoritative replacement for the original official publication.
 
-```
-
----
-
-If you want, I can also do **2 quick follow-ups** for you:
-
-1. write a **short GitHub repo description**
-2. write a **nice commit message** for your first push
-
-Both can be copy-pasted too.
-```

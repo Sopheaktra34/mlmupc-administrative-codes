@@ -38,7 +38,9 @@ The dataset is provided as a **faithful text extraction** from the original offi
 
 Original source publication:
 > Ministry of Land Management, Urban Planning and Construction (MLMUPC), Cambodia
+
 > Inter-ministerial Declaration No. 052 on the introduction of identification codes for the capital, province, city, district, khan, commune, sangkat and village of the Kingdom of Cambodia
+
 🔗 [Download The PDF from ODC(Open Development Cambodia)](https://data.opendevelopmentcambodia.net/laws_record/inter-ministerial-prakas-no-052-on-the-implementation-of-identification-codes-for-the-capital-provi)
 > 
 All administrative names and codes originate from the official MLMUPC document.

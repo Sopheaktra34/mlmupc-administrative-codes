@@ -7,14 +7,14 @@ This repository contains two files:
 - `MLMUPC.csv` — structured CSV format
 - `MLMUPC.txt` — plain-text hierarchical format
 
-The dataset is organized in Cambodia’s administrative hierarchy:
+The dataset is organized in Cambodia's administrative hierarchy:
 
 ```text
 Province / Capital (ខេត្ត/រាជធានី)
 └── District / Municipality / Khan (ស្រុក/ក្រុង/ខណ្ឌ)
     └── Commune / Sangkat (ឃុំ/សង្កាត់)
         └── Village (ភូមិ)
-````
+```
 
 ***
 
@@ -102,7 +102,7 @@ This version is useful for:
 
 ## Data Structure
 
-This dataset follows Cambodia’s administrative hierarchy:
+This dataset follows Cambodia's administrative hierarchy:
 
 *   **Province / Capital**
 *   **District / Municipality / Khan**
@@ -229,4 +229,3 @@ Please open an issue or submit a pull request if you would like to help improve 
 This repository is a community-prepared data extraction and structuring project based on a public source document.
 
 It is provided for convenience and practical reuse, but it should **not** be treated as a legally authoritative replacement for the original official publication.
-

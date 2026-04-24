@@ -2,9 +2,10 @@
 
 A structured dataset of Cambodian administrative divisions in **Khmer** and **English**, prepared from a public legal PDF and reorganized into reusable formats.
 
-This repository contains two files:
+This repository contains three files:
 
 - `MLMUPC.csv` — structured CSV format
+- `MLMUPC.json` — JSON export converted from the CSV
 - `MLMUPC.txt` — plain-text hierarchical format
 
 The dataset is organized in Cambodia's administrative hierarchy:
@@ -45,6 +46,7 @@ This project is intended to make the data easier to use for:
 ```text
 .
 ├── MLMUPC.csv
+├── MLMUPC.json
 ├── MLMUPC.txt
 └── README.md
 ```
@@ -77,7 +79,35 @@ code,level,name_kh,name_en,parent_code
 
 ***
 
-### 2) `MLMUPC.txt`
+### 2) `MLMUPC.json`
+
+A JSON export converted from `MLMUPC.csv`.
+
+This file is recommended for application use because it preserves the same hierarchical structure and `parent_code` relationships in JSON format.
+
+#### Fields
+
+*   `code` — administrative code
+*   `level` — administrative level (`province`, `district`, `commune`, `village`)
+*   `name_kh` — name in Khmer
+*   `name_en` — English / Latin transliteration
+*   `parent_code` — parent administrative unit code
+
+#### Example
+
+```json
+{
+  "code": "01",
+  "level": "province",
+  "name_kh": "បន្ទាយមានជ័យ",
+  "name_en": "Banteay Meanchey",
+  "parent_code": ""
+}
+```
+
+***
+
+### 3) `MLMUPC.txt`
 
 A human-readable plain-text hierarchy of the same data.
 

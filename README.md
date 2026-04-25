@@ -30,7 +30,7 @@ This dataset contains the following number of administrative units:
 | Communes / Sangkats                | **1,653**  |
 | Villages                           | **14,553 + 1** |
 
-for the village except 1 cause the code not align with the parents code: 
+for the village except 1 cause the code not align with the parents code (when you quries the data by code in database using sql command): 
 
 * (05050201 ភូមិ យស់ជោ Yuos Chou) and this village is in (051002 ឃុំ ជើងរាស់ Cheung Roas)
 > Note: Village counts are based on **unique administrative codes**.  

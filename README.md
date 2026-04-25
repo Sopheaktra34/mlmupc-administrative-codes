@@ -32,9 +32,7 @@ This dataset contains the following number of administrative units:
 
 for the village except 1 cause the code not align with the parents code: 
 
-> 05050201 ភូមិ យស់ជោ Yuos Chou and this village is in 051002 ឃុំ ជើងរាស់ Cheung Roas
-
-
+* (05050201 ភូមិ យស់ជោ Yuos Chou) and this village is in (051002 ឃុំ ជើងរាស់ Cheung Roas)
 > Note: Village counts are based on **unique administrative codes**.  
 > The original source text contains a small number of duplicated village entries, which were deduplicated by code.
 

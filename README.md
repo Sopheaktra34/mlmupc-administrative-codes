@@ -4,11 +4,11 @@ A structured dataset of Cambodian administrative divisions in **Khmer** and **En
 
 This repository contains three files:
 
-- `MLMUPC.csv` — structured CSV format
-- `MLMUPC.json` — JSON export converted from the CSV
-- `MLMUPC.txt` — plain-text hierarchical format
+*   `MLMUPC.csv` — structured CSV format
+*   `MLMUPC.json` — JSON export converted from the CSV
+*   `MLMUPC.txt` — plain-text hierarchical format
 
-The dataset is organized in Cambodia's administrative hierarchy:
+The dataset follows Cambodia’s official administrative hierarchy:
 
 ```text
 Province / Capital (ខេត្ត/រាជធានី)
@@ -19,22 +19,41 @@ Province / Capital (ខេត្ត/រាជធានី)
 
 ***
 
+## Dataset Size (Administrative Units)
+
+This dataset contains the following number of administrative units:
+
+| Level                              | Count      |
+| ---------------------------------- | ---------- |
+| Provinces / Capital                | **25**     |
+| Districts / Municipalities / Khans | **210**    |
+| Communes / Sangkats                | **1,653**  |
+| Villages                           | **14,553 + 1** |
+
+for the village except 1 cause the code not align with the parents code: 05050201 ភូមិ យស់ជោ Yuos Chou and this village is in 051002 ឃុំ ជើងរាស់ Cheung Roas
+
+
+> Note: Village counts are based on **unique administrative codes**.  
+> The original source text contains a small number of duplicated village entries, which were deduplicated by code.
+
+***
+
 ## Overview
 
-This repository is a personal data-preparation project created from a public source PDF.
+This repository is a personal data‑preparation project created from a public source PDF.
 
 I manually:
 
 *   extracted text from the source PDF using OCR
 *   cleaned and normalized the extracted text
 *   reorganized the content into a hierarchical dataset
-*   created both CSV and TXT versions for easier reuse
+*   created CSV, JSON, and TXT versions for easier reuse
 
 This project is intended to make the data easier to use for:
 
 *   database import
 *   GIS and mapping
-*   lookup/search systems
+*   lookup and search systems
 *   address forms and cascading dropdowns
 *   administrative reference
 *   research and localization work
@@ -57,7 +76,7 @@ This project is intended to make the data easier to use for:
 
 ### 1) `MLMUPC.csv`
 
-A machine-friendly structured dataset.
+A machine‑friendly structured dataset.
 
 #### Columns
 
@@ -83,7 +102,7 @@ code,level,name_kh,name_en,parent_code
 
 A JSON export converted from `MLMUPC.csv`.
 
-This file is recommended for application use because it preserves the same hierarchical structure and `parent_code` relationships in JSON format.
+This version preserves the same hierarchical structure and `parent_code` relationships in JSON format and is recommended for application use.
 
 #### Fields
 
@@ -109,7 +128,7 @@ This file is recommended for application use because it preserves the same hiera
 
 ### 3) `MLMUPC.txt`
 
-A human-readable plain-text hierarchy of the same data.
+A human‑readable plain‑text hierarchy of the same data.
 
 #### Example
 
@@ -124,7 +143,7 @@ This version is useful for:
 
 *   manual checking
 *   quick browsing
-*   plain-text search
+*   plain‑text search
 *   comparing extracted text against the original PDF
 *   lightweight reference without CSV tools
 
@@ -132,32 +151,30 @@ This version is useful for:
 
 ## Data Structure
 
-This dataset follows Cambodia's administrative hierarchy:
+This dataset follows Cambodia’s official administrative coding structure:
 
 *   **Province / Capital**
 *   **District / Municipality / Khan**
 *   **Commune / Sangkat**
 *   **Village**
 
-The coding system is hierarchical, which makes the dataset suitable for:
+The hierarchical code system supports:
 
-*   parent-child lookups
+*   parent‑child lookups
 *   nested administrative trees
 *   region filtering
-*   search and validation
+*   address validation
 *   province → district → commune → village dropdown selectors
 
 ***
 
 ## Suggested Use Cases
 
-This dataset may be useful for:
-
 ### Web & Application Development
 
-*   location selectors
 *   address forms
-*   profile location input
+*   location selectors
+*   user profile location input
 *   logistics and delivery systems
 
 ### Data Engineering
@@ -171,10 +188,10 @@ This dataset may be useful for:
 ### GIS, Government, and Research
 
 *   administrative reference
-*   geospatial projects
-*   census or demographic work
+*   mapping projects
+*   census and demographic analysis
 *   local governance systems
-*   NGO / development projects
+*   NGO and development work
 
 ***
 
@@ -182,7 +199,7 @@ This dataset may be useful for:
 
 The original public source document is hosted by **Open Development Cambodia (ODC)**:
 
-**Inter-ministerial Prakas no. 052 on the implementation of identification codes for the capital, provinces, municipalities, districts, Khans, communes, Sangkats, and villages of the Kingdom of Cambodia**
+**Inter‑ministerial Prakas No. 052 on the implementation of identification codes for the capital, provinces, municipalities, districts, Khans, communes, Sangkats, and villages of the Kingdom of Cambodia**
 
 Source page:  
 <https://data.opendevelopmentcambodia.net/laws_record/inter-ministerial-prakas-no-052-on-the-implementation-of-identification-codes-for-the-capital-provi/resource/30a2354d-8158-43a6-a1b2-e27bcc6f795b>
@@ -190,12 +207,13 @@ Source page:
 ### Associated institutions
 
 *   **ក្រសួងរៀបចំដែនដី នគរូបនីយកម្ម និងសំណង់**  
-    **Ministry of Land Management, Urban Planning and Construction**
-*   **ក្រសួងមហាផ្ទៃ**  
-    **Ministry of Interior**
+    Ministry of Land Management, Urban Planning and Construction
 
-This repository is **not an official publication** of ODC or of any government institution.  
-It is a **personal OCR extraction, cleaning, and restructuring** of public source material for easier reuse.
+*   **ក្រសួងមហាផ្ទៃ**  
+    Ministry of Interior
+
+This repository is **not an official publication** of ODC or any government institution.  
+It is a **personal OCR extraction, cleaning, and restructuring** of public source material.
 
 ***
 
@@ -203,39 +221,37 @@ It is a **personal OCR extraction, cleaning, and restructuring** of public sourc
 
 Because this dataset was manually extracted and cleaned from a PDF source, there may still be:
 
-*   OCR errors
+*   OCR artifacts
 *   transliteration inconsistencies
-*   spacing / punctuation issues
-*   formatting artifacts from the original PDF
-*   occasional discrepancies that should be reviewed before production use
+*   spacing or punctuation issues
+*   formatting remnants from the original PDF
+*   minor discrepancies that should be reviewed before production use
 
-If you find any issues, contributions and corrections are welcome.
+If issues are found, corrections and improvements are welcome.
 
 ***
 
 ## Attribution
 
-If you reuse this repository, please consider acknowledging:
+If you reuse this dataset, please consider acknowledging:
 
 *   the original public source document hosted by **Open Development Cambodia (ODC)**
-*   the fact that this repository is a **manually prepared OCR/text extraction and restructuring** of that source
+*   the manual OCR extraction, cleaning, and restructuring performed by the repository maintainer
 
 Suggested attribution:
 
-> Based on a public ODC-hosted PDF of Inter-ministerial Prakas no. 052 on Cambodian administrative identification codes; repository version prepared through OCR extraction, cleaning, and restructuring by the repository maintainer.
+> Based on a public ODC‑hosted PDF of Inter‑ministerial Prakas No. 052 on Cambodian administrative identification codes; dataset prepared through OCR extraction, cleaning, and restructuring by the repository maintainer.
 
 ***
 
 ## License
 
-The original ODC resource page lists the source document license as:
+The original source page lists the license as:
 
 **License not specified**
 
-This repository does **not** claim ownership of the original legal/public source content.  
+This repository does **not** claim ownership of the original legal content.  
 Please review the original source and applicable reuse conditions before redistribution or commercial use.
-
-If desired, you may add a separate note for the repository formatting / structuring work only.
 
 ***
 
@@ -248,14 +264,14 @@ Contributions are welcome, especially for:
 *   transliteration cleanup
 *   missing or duplicated entries
 *   formatting improvements
-*   schema or documentation enhancements
+*   schema and documentation enhancements
 
-Please open an issue or submit a pull request if you would like to help improve the dataset.
+Please open an issue or submit a pull request.
 
 ***
 
 ## Disclaimer
 
-This repository is a community-prepared data extraction and structuring project based on a public source document.
+This repository is a community‑prepared data extraction and structuring project based on a public legal source document.
 
-It is provided for convenience and practical reuse, but it should **not** be treated as a legally authoritative replacement for the original official publication.
+It is provided for convenience and reuse and should **not be treated as a legally authoritative substitute** for the original official publication.
